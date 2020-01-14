@@ -1,1 +1,4 @@
 * Elixir language resources
+  - `rumbl/` - contains the source code for a Phoenix application
+    built following:
+    - McCord, Chris, Bruce Tate, and Jose Valim, Programming Phoenix 1.4 Productive, Reliable, Fast (Dallas: The Pragmatic Bookshelf, 2018)
