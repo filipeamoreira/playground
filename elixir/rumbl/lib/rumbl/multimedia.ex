@@ -1,4 +1,6 @@
 defmodule Rumbl.Multimedia do
+  alias Rumbl.Accounts
+
   @moduledoc """
   The Multimedia context.
   """
@@ -49,9 +51,10 @@ defmodule Rumbl.Multimedia do
       {:error, %Ecto.Changeset{}}
 
   """
-  def create_video(attrs \\ %{}) do
+  def create_video(%Accounts.User{} = user, attrs \\ %{}) do
     %Video{}
     |> Video.changeset(attrs)
+    |> Ecto.Changeset.put_assoc(:user, user)
     |> Repo.insert()
   end
 
